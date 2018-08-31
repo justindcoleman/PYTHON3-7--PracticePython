@@ -47,5 +47,9 @@ print "Hello " + name
 print "You're currently " + age
 differenceBetween = 100 - int(age)
 yearTheyTurnOneHundred = int(currentYear) + int(differenceBetween)
-print "You'll turn 100 in the year: " + str(yearTheyTurnOneHundred)
+
+while printIterations is not 0:
+    print "You'll turn 100 in the year: " + str(yearTheyTurnOneHundred)
+    printIterations = int(printIterations) - 1
+
 raw_input('Press any key to exit')
