@@ -1,35 +1,50 @@
-correctTypesFirst = False
-correctTypesSecond = False
+correctTypes = False
+#correctTypesSecond = False
 name = raw_input('Please enter your name: ')
 errorMessage = 'This is not a number!'
-while correctTypesFirst == False:
+while correctTypes is False:
     age = raw_input('Please enter your age: ')
     try:
         int(age)
-        correctTypesFirst = True
+        correctTypes = True
 
     except ValueError:
         try:
             float(age)
-            correctTypesFirst = True
+            correctTypes = True
         except ValueError:
             print errorMessage
 
-while correctTypesSecond == False:
+correctTypes = False
+while correctTypes is False:
     currentYear = raw_input('Please enter the current year: ')
     try:
         int(currentYear)
-        correctTypesSecond = True
+        correctTypes = True
 
     except ValueError:
         try:
             float(currentYear)
-            correctTypesSecond = True
+            correctTypes = True
+        except ValueError:
+            print errorMessage
+
+correctTypes = False
+while correctTypes is False:
+    printIterations = raw_input('Enter a number: ')
+    try:
+        int(printIterations)
+        correctTypes = True
+
+    except ValueError:
+        try:
+            float(printIterations)
+            correctTypes = True
         except ValueError:
             print errorMessage
 
 print "Hello " + name
-print "You're currently "+ age
+print "You're currently " + age
 differenceBetween = 100 - int(age)
 yearTheyTurnOneHundred = int(currentYear) + int(differenceBetween)
 print "You'll turn 100 in the year: " + str(yearTheyTurnOneHundred)
