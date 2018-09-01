@@ -1,6 +1,5 @@
-correctTypes = False
-#correctTypesSecond = False
 name = raw_input('Please enter your name: ')
+correctTypes = False
 errorMessage = 'This is not a number!'
 while correctTypes is False:
     age = raw_input('Please enter your age: ')
