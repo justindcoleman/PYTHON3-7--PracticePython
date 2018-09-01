@@ -13,9 +13,11 @@ while isInt is False:
         except ValueError:
             print errorMessage
 
-divideAnswer = int(userAnswer) / 2
+divideAnswer = int(userAnswer) % 2
 
-if divideAnswer is 0:
+if int(userAnswer) % 4 is 0:
+    print('Your number is a multiple of four!')
+elif divideAnswer is 0:
     print ('Your number is even!')
 elif divideAnswer is not 0:
     print ('your number is odd!')
