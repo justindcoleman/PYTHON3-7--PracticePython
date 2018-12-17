@@ -1,10 +1,3 @@
-print('''
-Programmer: Justin Coleman
-Course:     COSC 146
-Due Date:   12-6-2018
-Lab#:       Take Home Project #2
-''')
-
 #find number of moves to balance packets
 def findMoves(packets): 
     sum = 0
