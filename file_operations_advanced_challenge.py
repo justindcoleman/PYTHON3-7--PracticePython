@@ -14,14 +14,14 @@ def findMoves(packets):
 #
 
 #get file and create handle
-filename = input("Enter the name of the file you would like to open, including extension (.txt, .doc, etc): ")
-fopen = open(filename, 'r')
+fileName = input("Enter the name of the file you would like to open, including extension (.txt, .doc, etc): ")
+fileHandle = open(fileName, 'r')
 #
 packetCount = -1
 packets = []
 end = False
 while end is False:
-  inputs = fopen.readline().rsplit() #pull in the number of packets
+  inputs = fileHandle.readline().rsplit() #pull in the number of packets
   inputs = list(map(int, inputs)) #convert elements to int
   for input in inputs:
     if len(packets) < packetCount:  #fills up the list
