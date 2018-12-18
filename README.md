@@ -24,3 +24,5 @@ working through the exercises on http://www.practicepython.org/exercises/
         The script creates a list and fills it with a user defined amount of random numbers (range 10-100) and does various operations to them.
     5. file_operations_and_dicts.py:
         reads emails information from a text file (see included mbox-short.txt), imports relevent information into a dict, gets counts and times, outputs that info to console.  no regex allowed
+     6. regex_and_file_input:
+        a simple grep type script using RE.  Opens a file for reading, takes user provided regex, and runs it on the file.
