@@ -16,13 +16,14 @@ while not userRegex:
 
 #
 regexMatches = []
+matchCounter = 0
 for line in fileHandle:
     regexMatches.extend(re.findall(userRegex, line))
-
+matchCounter = len(regexMatches)
 #
 
 #
-print("Matches:")
+print("Found \"{regex}\" {matched} times:".format(regex=userRegex, matched=matchCounter))
 count = 0
 for item in regexMatches:
     count += 1
