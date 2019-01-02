@@ -8,3 +8,6 @@
 # #output log showing any non-empty folders
 # delete empty folders?
 
+import os.path #i think this is how you use the native file navigator
+import os.rename #renaming function that can probably be used
+
