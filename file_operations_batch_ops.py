@@ -8,6 +8,7 @@
 # #output log showing any non-empty folders
 # delete empty folders?
 
-import os.path #i think this is how you use the native file navigator
-import os.rename #renaming function that can probably be used
-
+from os import path #i think this is how you use the native file navigator
+from os import rename #renaming function that can probably be used
+from os import listdir #everything in the directory (files and sub-directories)
+from os import walk #two lists for each directory it visits - splitting into files and directories
