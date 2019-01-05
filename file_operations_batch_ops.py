@@ -30,18 +30,18 @@ for root, directory, files in walk(directoriesToWorkOn):
     if directory not in directoryList:
         directoryList.extend(directory)
     if files not in filesList:
+        # print("FILES:  ", type(files), files, "\n")
         filesList.extend(files)
 
-for files in filesList:
-    if [^a-zA-Z0-9.] in files:
+
 
 
 
 rootLocation = ''.join(rootList[0:3])
-for entry in directoryList:
-    print(entry)
-print()
-print()
+# for entry in filesList:
+#     print(type(entry), entry, sep="\t")
+# print()
+# print()
 
 
-# print(rootLocation + directoryList[1])
+print(rootLocation + directoryList[1])
