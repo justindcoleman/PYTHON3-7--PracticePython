@@ -8,7 +8,7 @@
 # #output log showing any non-empty folders
 # delete empty folders?
 
-from os import walk  # everything in the directory (files and sub-directories)
+from os import walk
 from tkinter.filedialog import askdirectory
 import re
 
@@ -24,6 +24,7 @@ directoriesToWorkOn = askdirectory()
 #     print("directories: ", dirs)
 #     print("files: ", files)
 
+
 for root, directory, files in walk(directoriesToWorkOn):
     if root not in rootList:
         rootList.extend(root)
@@ -33,15 +34,22 @@ for root, directory, files in walk(directoriesToWorkOn):
         # print("FILES:  ", type(files), files, "\n")
         filesList.extend(files)
 
+sanitizedFilesList = []
+why = []
 
+for files in filesList:
+    cleanedName = re.sub("[^a-zA-Z0-9.'& ]", '', files)
+    for char in cleanedName:
+        why.extend(char)
+    cleanedString = ''.join(why)
+    print("why: ", why)
+    print("cleanedString: ", cleanedString)
+    sanitizedFilesList.extend(cleanedString)
+    why = []
 
-
-
-rootLocation = ''.join(rootList[0:3])
 # for entry in filesList:
-#     print(type(entry), entry, sep="\t")
-# print()
-# print()
-
-
-print(rootLocation + directoryList[1])
+#     print("filesList: ", entry)
+print()
+# for entry in sanitizedFilesList:
+#     print("sanitizedFilesList: ", entry)
+print(sanitizedFilesList)
