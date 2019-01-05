@@ -40,11 +40,10 @@ why = []
 for files in filesList:
     cleanedName = re.sub("[^a-zA-Z0-9.'& ]", '', files)
     for char in cleanedName:
-        why.extend(char)
+        why.append(char)
     cleanedString = ''.join(why)
-    print("why: ", why)
     print("cleanedString: ", cleanedString)
-    sanitizedFilesList.extend(cleanedString)
+    sanitizedFilesList.append(cleanedString)
     why = []
 
 # for entry in filesList:
