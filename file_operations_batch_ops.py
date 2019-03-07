@@ -1,3 +1,5 @@
+## pathlib might be a better choice than using os.walk, etc
+
 # get file location (presumable the native file navigation window can be used?) **
 # make a list of all the sub directory names (maybe a dict would be better?) **
 # crawl the list removing all non-alphanumeric characters (LEAVE ', &, and . in file names tho) **
